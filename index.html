@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
@@ -17,8 +18,8 @@
 </head>
 
 <body>
-  <div class="container">
-    <nav>
+  <div >
+    <nav class="purple darken-3">
 
       <div class="row">
         <div class="col s6">
@@ -38,7 +39,7 @@
 
 
         <div class="input-field col s2">
-          <a class="waves-effect waves-light btn-small red lighten-3">Log In</a>
+          <a class="waves-effect waves-light btn-small orange accent-4">Log In</a>
           <a href="#">Reset Password</a>
         </div>
 
@@ -72,10 +73,36 @@
         </div>
         <div class="input-field col s12">
           <label for="datepicker"  id="date-picker">Birthday</label>
-          <input type="date"  class="datepicker ">
+          <input type="text"  class="datepicker ">
         </div>
+        <div class="row">
+          <div class="input-field col s6">
+            
+            <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio"  />
+                <span>Male</span>
+              </label>
+            </p>
+           
+          </div>
+          <div class="input-field col s6">
+            <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio"  />
+                <span>Female</span>
+              </label>
+            </p>
+           
+          </div>
+         
+        </div>
+       
       </div>
-      
+      <div class="col s12 right-align">
+        <a class="waves-effect waves-light btn-large orange accent-4">Sign Up</a>
+        
+      </div>
 
 
       
@@ -89,7 +116,36 @@
 
 
 
-
+  <footer class="page-footer purple lighten-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
 </body>
-
+<script src="script.js"></script>
+  <!-- JQuery  -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 </html>

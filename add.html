@@ -18,7 +18,7 @@
     <script src="jquery-3.4.1.min.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Landing Page</title>
+    <title>Add Page</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 
             <div class="row">
                 <div class="col s6">
-                    <a href="#" class="brand-logo">my-meds</a>
+                    <a href="/" class="brand-logo">my-meds</a>
                     <i class="large material-icons" id="itag">local_hospital </i>
 
 
@@ -42,70 +42,49 @@
 
             </div>
 <div class="container" style="color: black;">
-    <h1 class="center-align">My Medications</h1>
-    <div class="divider"></div>
+    <h1 class="center-align"> Add New Medication</h1>
+    <!-- <div class="divider"></div> -->
     <div class="section">
-     <table>
-         <thead >
-             <tr>
-                 <th>Name</th>
-                 <th>Mg</th>
-                 <th>Quantity Per Day</th>
-                 <th>Physician</th>          
-             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td id="name">Medication Name</td>
-                <td id="mg">400</td>
-                <td id="qty">2</td>
-                <td id="physician">Dr. DoLittle</td>
-            </tr>         
-                
-        </tbody>
-     </table>
     </div>
-   
-
 </div>
+
+
 
 <div class="container center-align">
+ <!-- form -->
+
+  <form class="col s12 center-align" id="form-id">
     <div class="row">
-        <div class="input-field col s6">
-            <a href="/add" class="waves-effect waves-light btn-small green accent-4">Add  Medication </a>
+        <div class="col s12 ">
+          <input placeholder="What is the name of the Medication?" id="med-name" type="text" >
+          <label for="med-name"></label>
+        </div>
+        <div class="col s12 ">
+            <input placeholder="How many Milligrams?" id="med-mg" type="text" >
+            <label for="med-mg"></label>
+          </div>
+          <div class="col s12 ">
+            <input placeholder="What is the quantity per day?" id="med-qty" type="text" >
+            <label for="med-qty"></label>
+          </div>
+          <div class="col s12 ">
+            <input placeholder="Who is the Prescribing Physician?" id="med-physician" type="text" >
+            <label for="med-physician"></label>
+          </div>
+
+  </form>
+    <div class="row">
+        <div class="input-field col s12">
+            <a class="btn-floating btn-large waves-effect green accent-4" id="add-btn"><i class="material-icons">add</i></a>
         
         </div>
-        <div class="input-field col s6">
-            <a class="waves-effect waves-light btn-small red accent-4">Delete Medication </a>
-        
-        </div>
+      
        
     </div>
+    <a href="/" class="waves-effect waves-light btn-small green accent-4">Go to the Landing Page </a>
 </div>
 
-
-    <div class="container center-align">
-        <form action="">
-
-            <div class="row">
-           
-                <a class="waves-effect waves-light btn-small orange accent-4" id="search-btn">Search Medication </a>
-                <div class="col s6" >
-                    <input type="text" id="med-search">
-                    
-                  </div>
-            
-        </div>
-        </form>
-    
-      
-    </div>
-
-
-
-
-
-           
+        
 
 
 </body>

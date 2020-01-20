@@ -14,31 +14,42 @@ var medications = [{
         routeName: "aleve",
         name: "Aleve",
         dosage: 5,
+        quantity:1,
         physician: "Dr. Dolittle"
     }, {
         id: 2,
         routeName : "tylenol",
         name: "Tylenol",
         dosage: 5,
+        quantity:1,
         physician: "Dr. Dolittle"
     }, {
         id: 3,
         routeName : "capsules",
         name: "Sky-Lights",
         dosage: 5,
+        quantity:1,
         physician: "Dr. Dolittle"
     }
 
 ] 
  // Routes 
 
+ //basic route, sends the user to the landingpage
  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "landingpage.html"));
   });
+
+app.get("/add", function (req, res){
+res.sendFile(path.join(__dirname, "add.html"));
+})  
 //   REST API - Representational State Transfer
+
   app.get("/api/medications", function(req, res) {
-    return res.send(medications);
+    return res.json(medications);
   });
+
+//displays a single medication or returns false
   app.get("/api/medications/:medication", function(req, res) {
     
     var selected = req.params.medication;
@@ -52,15 +63,14 @@ var medications = [{
     }
   
    
-    return res.send("No Medication found");
+    return res.json(false);
   });
 
-
+// Create new medications - takes in JSON input
   app.post("/api/medications", function(req, res) {
     var newmedication = req.body;
-  
-    console.log(newmedication);
-  
+    // Remove spaces from newmedication using regEx Pattern
+    newmedication.routeName = newmedication.name.replace(/\s+/g, "").toLowerCase();
     medications.push(newmedication);
   
     res.json(newmedication);

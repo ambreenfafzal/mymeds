@@ -58,3 +58,17 @@ main {
   
 
 }
+
+#logout-btn {
+  margin-left: 30%;
+}
+
+.input-field {
+  border: 2px black;
+}
+
+#form-id {
+  width: 50%;
+  margin-left: 25%;
+  
+}
